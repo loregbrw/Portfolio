@@ -44,7 +44,7 @@ export const Home = () => {
 
     return (
         <>
-            <Section>
+            <Section id="home">
                 <StyledImg src={Lore}></StyledImg>
                 <StyledInfo>
                     <StyledTitle>Lorena Gobara Falci</StyledTitle>

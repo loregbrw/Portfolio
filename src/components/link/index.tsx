@@ -1,4 +1,4 @@
-import { StyledLink } from "./style"
+import { StyledButton } from "./style"
 
 interface IButtonLinkProps {
     title: string,
@@ -9,14 +9,13 @@ interface IButtonLinkProps {
 export const ButtonLink = ({ title, color, link }: IButtonLinkProps) => {
     return (
         <>
-            <StyledLink
-                to={link}
+            <StyledButton
                 bgColor={color}
-                target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => window.open(link, '_blank')}
             >
                 {title}
-            </StyledLink>
+            </StyledButton>
         </>
     )
 }

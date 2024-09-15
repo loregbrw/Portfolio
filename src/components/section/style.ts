@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { EColorPalette } from "../../enums/EColorPalette";
 
 
 export const StyledSection = styled.section`
-  background-color: #e8e2dd;
+  background-color: ${EColorPalette.PLATINUM};
   display: flex;
   min-height: 100vh;
   height: fit-content;

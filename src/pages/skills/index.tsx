@@ -122,7 +122,7 @@ export const Skills = () => {
 
     return (
         <>
-            <Section>
+            <Section id="skills">
                 <StyledInfo style={{ alignItems: "center", maxWidth: "1000px" }}>
                     <StyledTitle>{language === "Portuguese" ? "Habilidades" : "Skills"}</StyledTitle>
                     <StyledSkill>

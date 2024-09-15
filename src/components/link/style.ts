@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { EColorPalette } from "../../enums/EColorPalette";
-import { Link } from "react-router-dom";
 
-interface IStyledLinkProps {
+interface IStyledButtonProps {
     bgColor: string;
 }
 
-export const StyledLink = styled(Link)<IStyledLinkProps>`
+export const StyledButton = styled.button<IStyledButtonProps>`
     background-color: ${({ bgColor }) => bgColor};
 
     padding: 5px 25px;

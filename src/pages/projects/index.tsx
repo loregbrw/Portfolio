@@ -116,7 +116,7 @@ export const Projects = () => {
 
     return (
         <>
-            <Section>
+            <Section id="projects">
                 <StyledInfo style={{ alignItems: "center", maxWidth: "100%" }}>
                     <StyledTitle>{language === "Portuguese" ? "Projetos" : "Projects"}</StyledTitle>
                     <StyledDiv>

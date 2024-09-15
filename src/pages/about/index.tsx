@@ -54,7 +54,7 @@ export const About = () => {
 
     return (
         <>
-            <Section>
+            <Section id="about">
                 <StyledInfo style={{ alignItems: "center", maxWidth: "1000px" }}>
                     <StyledTitle>{title}</StyledTitle>
                     <StyledBox>
