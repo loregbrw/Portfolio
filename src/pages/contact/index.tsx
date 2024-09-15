@@ -24,13 +24,13 @@ export const Contact = () => {
                             <StyledText onClick={() => window.open("https://github.com/loregbrw", '_blank')} style={{ fontWeight: "500", textDecoration: "underline", cursor: "pointer" }}>{"github.com/loregbrw"}</StyledText>
                         </StyledLink>
                         <StyledLink>
-                            <StyledText>{"LinkedIn: "}</StyledText>
-                            <StyledText onClick={() => window.open("https://www.linkedin.com/in/lorena-gobara-falci/", '_blank')} style={{ fontWeight: "500", textDecoration: "underline", cursor: "pointer" }}>{"linkedin.com/in/lorena-gobara-falci"}</StyledText>
+                            <StyledText>{"HackerRank: "}</StyledText>
+                            <StyledText onClick={() => window.open("https://www.hackerrank.com/profile/loregbrw", '_blank')} style={{ fontWeight: "500", textDecoration: "underline", cursor: "pointer" }}>{"hackerrank.com/profile/loregbrw"}</StyledText>
                         </StyledLink>
                     </StyledDiv>
                     <StyledButtons>
-                        <StyledButton onClick={() => window.open("mailto:loregobara@gmail.com", '_blank')} width={40} bgColor={EColorPalette.INDIANRED}>{language === "Portuguese" ? "Mandar e-mail" : "Send email"}</StyledButton>
-                        <StyledButton onClick={() => window.open("https://wa.me/5541985249657", '_blank')} width={60} bgColor={EColorPalette.BERKELEYBLUE}>{language === "Portuguese" ? "Mandar mensagem pelo WhatsApp" : "Send a message via WhatsApp"}</StyledButton>
+                        <StyledButton onClick={() => window.open("https://www.linkedin.com/in/lorena-gobara-falci/", '_blank')} width={35} bgColor={EColorPalette.INDIANRED}>{language === "Portuguese" ? "Ver LinkedIn" : "See LinkedIn"}</StyledButton>
+                        <StyledButton onClick={() => window.open("https://wa.me/5541985249657", '_blank')} width={65} bgColor={EColorPalette.BERKELEYBLUE}>{language === "Portuguese" ? "Mandar mensagem pelo WhatsApp" : "Send a message via WhatsApp"}</StyledButton>
                     </StyledButtons>
                 </StyledFooter>
             </StyledSection>

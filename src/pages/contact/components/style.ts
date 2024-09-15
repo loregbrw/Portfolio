@@ -65,7 +65,7 @@ export const StyledButtons = styled.div`
     display: flex;
 
     width: 100%;
-    max-width: 540px;
+    max-width: 520px;
 
     padding: 0 20px;
 `
