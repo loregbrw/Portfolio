@@ -55,13 +55,15 @@ export const StyledSpan = styled.span`
   position: relative;
   display: inline-block;
 
+  font-size: 15px;
+
   &::after {
     content: "";
     position: absolute;
     width: 0;
     height: 3px;
     left: -1px;
-    bottom: 0;
+    bottom: -2px;
     background-color: ${EColorPalette.CERULEAN};
     transition: width 0.3s ease-out;
     border-radius: 10px;
@@ -73,7 +75,7 @@ export const StyledSpan = styled.span`
 `;
 
 export const StyledLanguage = styled.span`
-
+  font-size: 15px;
 `
 
 export const StyledImg = styled.img`

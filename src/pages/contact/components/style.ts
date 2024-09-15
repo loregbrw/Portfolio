@@ -47,7 +47,7 @@ export const StyledButton = styled.button<IButtonProps>`
     color: ${EColorPalette.PLATINUM};
 
     padding: 5px 25px;
-    font-weight: 600;
+    font-weight: 500;
 
     margin: 0 5px;
 
@@ -65,7 +65,7 @@ export const StyledButtons = styled.div`
     display: flex;
 
     width: 100%;
-    max-width: 510px;
+    max-width: 540px;
 
     padding: 0 20px;
 `

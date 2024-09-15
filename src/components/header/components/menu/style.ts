@@ -41,7 +41,7 @@ export const StyledDiv = styled.div`
 
 export const StyledTitle = styled.span`
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
 `
 
 export const StyledClose = styled.img`
