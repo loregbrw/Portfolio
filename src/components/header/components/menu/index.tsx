@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { ILink } from "../..";
 import { StyledBg, StyledClose, StyledDiv, StyledHr, StyledLink, StyledMenu, StyledTitle } from "./style"
 
