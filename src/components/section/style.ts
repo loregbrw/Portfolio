@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
+
 export const StyledSection = styled.section`
   background-color: #e8e2dd;
   display: flex;
+  min-height: 100vh;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 90px max(5%, 35px) max(5%, 35px) max(5%, 35px);
 
-  height: 100vh;
-  min-height: fit-content;
+  width: 100%;
 
-  padding: 90px 5% 5% 5%;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;

@@ -1,51 +1,97 @@
+import React, { useContext, useEffect, useState } from "react";
 import {
   StyledArrow,
   StyledBox,
+  StyledButton,
   StyledDiv,
   StyledHeader,
   StyledImg,
+  StyledLanguage,
+  StyledMenu,
   StyledSpan,
 } from "./style";
-import Translate from "../../assets/Translate.png";
-import Arrow from "../../assets/Arrow.png";
+import Translate from "/Translate.png";
+import Change from "/Change.png";
+import { LanguageContext } from "../../context/language";
+import Menu from "/menu.png";
+import { LinkMenu } from "./components/menu";
 
-const Links: string[] = ["/aboutme", "/skills", "/projects", "/contact"];
-
-interface ILink {
+export interface ILink {
   name: string;
-  link: number;
+  link: string;
 }
 
 const PortugueseLinks: ILink[] = [
-  { name: "Sobre mim", link: 0 },
-  { name: "Habilidades", link: 1 },
-  { name: "Projetos", link: 2 },
-  { name: "Contato", link: 3 },
+  { name: "Inicial", link: "#home" },
+  { name: "Sobre mim", link: "#about" },
+  { name: "Habilidades", link: "#skills" },
+  { name: "Projetos", link: "#projects" },
+  { name: "Contato", link: "#contact" },
 ];
 
 const EnglishLinks: ILink[] = [
-  { name: "About me", link: 0 },
-  { name: "Skills", link: 1 },
-  { name: "Projects", link: 2 },
-  { name: "Contact", link: 3 },
+  { name: "Home", link: "#home" },
+  { name: "About me", link: "#about" },
+  { name: "Skills", link: "#skills" },
+  { name: "Projects", link: "#projects" },
+  { name: "Contact", link: "#contact" },
 ];
 
 export const Header = () => {
+  const { language, toggleLanguage } = useContext(LanguageContext);
+  const [links, setLinks] = useState<ILink[]>([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isArrowRotated, setIsArrowRotated] = useState(false);
+
+  useEffect(() => {
+    setLinks(language === "Portuguese" ? PortugueseLinks : EnglishLinks);
+  }, [language]);
+
+  const handleToggleLanguage = () => {
+    toggleLanguage();
+    setIsArrowRotated(!isArrowRotated);
+  };
+
+  const handleLinkClick = (id: string) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const openMenu = () => {
+    setIsMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
+      <LinkMenu isShowing={isMenuOpen} links={links} close={closeMenu} />
+
       <StyledHeader>
-        <StyledDiv>
+        <StyledBox onClick={handleToggleLanguage}>
           <StyledImg src={Translate} />
           <StyledBox>
-            <StyledSpan>Portuguese</StyledSpan>
-            <StyledArrow src={Arrow}></StyledArrow>
+            <StyledLanguage>{language}</StyledLanguage>
+            <StyledArrow rotated={isArrowRotated} src={Change} />
           </StyledBox>
-        </StyledDiv>
+        </StyledBox>
         <StyledDiv>
-          {PortugueseLinks.map((link) => (
-            <StyledSpan key={link.link}>{link.name}</StyledSpan>
+          {links.map((link) => (
+            <StyledSpan
+              key={link.link}
+              onClick={() => handleLinkClick(link.link)}
+            >
+              {link.name}
+            </StyledSpan>
           ))}
         </StyledDiv>
+        <StyledMenu>
+          <StyledButton src={Menu} onClick={openMenu} />
+        </StyledMenu>
       </StyledHeader>
     </>
   );

@@ -6,20 +6,20 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import { App } from "./App";
-import { Home } from "./pages/home";
+
+import { LanguageProvider } from "./context/language";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:
-      <App>
-        <Home />
-      </App>
+    element: <App />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
   </React.StrictMode>
 );

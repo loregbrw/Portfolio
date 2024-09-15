@@ -1,15 +1,14 @@
+import React from "react";
 import { StyledSection } from "./style";
 
-interface HomeProps {
-  children: ReactNo
+interface IHomeProps {
+  children: React.ReactNode,
 }
 
-export const Section = ({ children }: any) => {
+export const Section = ({ children }: IHomeProps) => {
   return (
-    <>
-        <StyledSection>
-            {children}
-        </StyledSection>
-    </>
+    <StyledSection>
+      {children}
+    </StyledSection>
   );
 };
