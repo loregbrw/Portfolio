@@ -60,6 +60,8 @@ export const StyledClose = styled.img`
 export const StyledHr = styled.hr`
     border: ${EColorPalette.CERULEAN} solid 2px;
     margin: 10px 0;
+
+    border-radius: 5px;
 `
 
 export const StyledLink = styled.span`
