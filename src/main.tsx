@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import { App } from "./App";
+import { Analytics } from "@vercel/analytics/react"
 
 import { LanguageProvider } from "./context/language";
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <LanguageProvider>
       <RouterProvider router={router} />
+      <Analytics />
     </LanguageProvider>
   </React.StrictMode>
 );
