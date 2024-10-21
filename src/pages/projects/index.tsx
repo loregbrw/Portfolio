@@ -35,7 +35,7 @@ const PortugueseProjects: IProject[] = [
             { text: " de uma máquina de vendas, utilizando ", bold: false },
             { text: "C++", bold: true },
             { text: " e ", bold: false },
-            { text: "arduino.", bold: true },
+            { text: "arduino", bold: true },
             { text: ".", bold: false },
         ],
         link: "https://github.com/loregbrw/VendingMachine"
@@ -81,7 +81,7 @@ const EnglishProjects: IProject[] = [
             { text: " of a vending machine, using ", bold: false },
             { text: "C++", bold: true },
             { text: " and ", bold: false },
-            { text: "Arduino.", bold: true },
+            { text: "Arduino", bold: true },
             { text: ".", bold: false },
         ],
         link: "https://github.com/loregbrw/VendingMachine"

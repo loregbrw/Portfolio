@@ -7,7 +7,7 @@ import { StyledBox, StyledGallery, StyledImg } from "./components/style";
 import { StyledInfo } from "../home/components/style";
 
 import Hackathon from "/hackathon.jpeg"
-import IoTProject from "/IoTProject.jpeg"
+import HackathonCopel from "/HackathonCopel.jpeg"
 import Thiago from "/thiago.jpeg"
 
 const PortugueseText1: IText[] = [
@@ -75,7 +75,7 @@ export const About = () => {
                     </StyledBox>
                     <StyledGallery>
                         <StyledImg src={Hackathon} />
-                        <StyledImg src={IoTProject} />
+                        <StyledImg style={{ objectPosition: "top"}} src={HackathonCopel} />
                         <StyledImg src={Thiago} />
                     </StyledGallery>
                 </StyledInfo>
